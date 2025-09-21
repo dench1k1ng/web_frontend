@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HR System - Employee Management Wireframe</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+        }
+
+        /* Top Navigation Bar */
+        .top-nav {
+            background: #2c3e50;
+            padding: 12px 0;
+            margin-bottom: 20px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .top-nav a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 16px;
+            margin: 0 10px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+            transition: background 0.3s;
+            font-size: 14px;
+        }
+
+        .top-nav a:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .wireframe {
+            max-width: 1200px;
+            margin: 20px auto;
+            background: white;
+            border: 2px solid #333;
+        }
+
+        .box {
+            border: 1px solid #666;
+            padding: 10px;
+            margin: 5px;
+            background: #f9f9f9;
+        }
+
+        .header {
+            background: #ddd;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            background: #bbb;
+            width: 120px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #a3c442 0%, #7cb342 100%);
+            border-radius: 6px;
+            border: 2px solid #1f4e3d;
+            position: relative;
+        }
+
+        .logo-icon {
+            width: 24px;
+            height: 24px;
+            background: #1f4e3d;
+            border-radius: 50% 0 50% 50%;
+            transform: rotate(-45deg);
+            margin-right: 8px;
+        }
+
+        .logo-text {
+            font-size: 16px;
+            font-weight: 700;
+            color: #1f4e3d;
+            letter-spacing: -0.5px;
+        }
+
+        .nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-item {
+            background: #ccc;
+            padding: 8px 15px;
+        }
+
+        .nav-item.active {
+            background: #999;
+        }
+
+        .user-menu {
+            background: #bbb;
+            padding: 8px 15px;
+        }
+
+        .main-content {
+            padding: 20px;
+            min-height: 500px;
+        }
+
+        .search-bar {
+            display: flex;
+            gap: 10px;
+            margin: 15px 0;
+            align-items: center;
+        }
+
+        .search-input {
+            background: #eee;
+            padding: 8px;
+            border: 1px solid #999;
+            width: 300px;
+        }
+
+        .btn {
+            background: #ddd;
+            padding: 8px 15px;
+            border: 1px solid #999;
+        }
+
+        .btn-primary {
+            background: #bbb;
+        }
+
+        .employee-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .employee-card {
+            background: #f0f0f0;
+            padding: 15px;
+            border: 1px dashed #999;
+            text-align: center;
+        }
+
+        .avatar {
+            background: #ccc;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            margin: 0 auto 10px;
+        }
+
+        .table-section {
+            margin: 20px 0;
+        }
+
+        .table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .table th,
+        .table td {
+            border: 1px solid #999;
+            padding: 10px;
+            background: #f5f5f5;
+        }
+
+        .table th {
+            background: #ddd;
+        }
+
+        .footer {
+            background: #ddd;
+            padding: 15px;
+            text-align: center;
+            border-top: 1px solid #999;
+        }
+
+        .label {
+            font-size: 12px;
+            color: #666;
+            text-transform: uppercase;
+        }
+
+        /* Navigation Links */
+        .nav-item {
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .nav-item:hover {
+            background: #999;
+            color: white;
+        }
+
+        .nav-item.active {
+            background: #555;
+            color: white;
+        }
+
+        /* Remove old back navigation styles */
+    </style>
+</head>
+
+<body>
+    <!-- Top Navigation -->
+    <div class="top-nav">
+        <a href="index.html">← Back to Wireframe Overview</a>
+        <a href="../index.html">← Back to Main Assignment</a>
+    </div>
+
+    <div class="wireframe">
+        <!-- Header -->
+        <div class="header">
+            <div class="logo">
+                <div class="logo-icon"></div>
+                <span class="logo-text">FoodSave</span>
+            </div>
+            <div class="nav">
+                <div class="nav-item" onclick="location.href='wireframe_homepage.html'">Dashboard</div>
+                <div class="nav-item active" onclick="location.href='wireframe_employees.html'">Employees</div>
+                <div class="nav-item" onclick="location.href='wireframe_leave.html'">Leave</div>
+                <div class="nav-item" onclick="location.href='wireframe_recruitment.html'">Recruitment</div>
+                <div class="nav-item" onclick="location.href='wireframe_reports.html'">Reports</div>
+            </div>
+            <div class="user-menu">
+                <span class="label">User Menu</span>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <div class="box">
+                <h2>Employee Management</h2>
+                <p class="label">Manage employee records and information</p>
+            </div>
+
+            <!-- Search and Actions -->
+            <div class="search-bar">
+                <div class="search-input">
+                    <span class="label">Search employees...</span>
+                </div>
+                <div class="btn">Filter</div>
+                <div class="btn btn-primary">Add New Employee</div>
+                <div class="btn">Import/Export</div>
+            </div>
+
+            <!-- Employee Cards Grid -->
+            <div class="employee-grid">
+                <div class="employee-card">
+                    <div class="avatar"></div>
+                    <div class="label">John Doe</div>
+                    <div class="label">Software Engineer</div>
+                    <div class="label">Active</div>
+                </div>
+                <div class="employee-card">
+                    <div class="avatar"></div>
+                    <div class="label">Sarah Smith</div>
+                    <div class="label">HR Manager</div>
+                    <div class="label">Active</div>
+                </div>
+                <div class="employee-card">
+                    <div class="avatar"></div>
+                    <div class="label">Mike Johnson</div>
+                    <div class="label">Designer</div>
+                    <div class="label">Active</div>
+                </div>
+                <div class="employee-card">
+                    <div class="avatar"></div>
+                    <div class="label">Lisa Chen</div>
+                    <div class="label">Marketing</div>
+                    <div class="label">On Leave</div>
+                </div>
+                <div class="employee-card">
+                    <div class="avatar"></div>
+                    <div class="label">David Brown</div>
+                    <div class="label">Developer</div>
+                    <div class="label">Active</div>
+                </div>
+                <div class="employee-card">
+                    <div class="avatar"></div>
+                    <div class="label">Emma Wilson</div>
+                    <div class="label">Analyst</div>
+                    <div class="label">Active</div>
+                </div>
+            </div>
+
+            <!-- Employee Table -->
+            <div class="table-section">
+                <h3>Employee Directory</h3>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Department</th>
+                            <th>Position</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>001</td>
+                            <td>John Doe</td>
+                            <td>IT</td>
+                            <td>Software Engineer</td>
+                            <td>Active</td>
+                            <td>Edit | View</td>
+                        </tr>
+                        <tr>
+                            <td>002</td>
+                            <td>Sarah Smith</td>
+                            <td>HR</td>
+                            <td>HR Manager</td>
+                            <td>Active</td>
+                            <td>Edit | View</td>
+                        </tr>
+                        <tr>
+                            <td>003</td>
+                            <td>Mike Johnson</td>
+                            <td>Design</td>
+                            <td>UI Designer</td>
+                            <td>Active</td>
+                            <td>Edit | View</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <span class="label">Company Contact | Copyright 2025 | Privacy Policy | Support</span>
+        </div>
+    </div>
+
+    <div style="text-align: center; margin: 20px;">
+        <h3>Employee Management Wireframe</h3>
+        <p>Denis Shin - SE-2434 - HR Management System</p>
+    </div>
+</body>
+
+</html>
