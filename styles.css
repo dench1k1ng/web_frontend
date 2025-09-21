@@ -1,0 +1,303 @@
+/* Assignment 2: CSS Styling - Denis Shin */
+/* Layout built using div + floats (no Flexbox/Grid) */
+
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f9fa;
+}
+
+/* Clearfix utility */
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Header Section */
+#header {
+    background: linear-gradient(135deg, #2c3e50, #3498db);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 3px solid #1abc9c;
+}
+
+.logo-container {
+    margin-bottom: 15px;
+}
+
+.foodsave-logo {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.logo-icon {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(45deg, #27ae60, #2ecc71);
+    border-radius: 50%;
+    margin-right: 10px;
+    vertical-align: middle;
+    position: relative;
+}
+
+.logo-icon::before {
+    content: "🍃";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+}
+
+.logo-text {
+    font-size: 28px;
+    font-weight: bold;
+    vertical-align: middle;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+#header h1 {
+    font-size: 24px;
+    margin: 10px 0;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+#header p {
+    font-size: 14px;
+    opacity: 0.9;
+    font-style: italic;
+}
+
+/* Navigation Bar */
+#nav {
+    background-color: #34495e;
+    padding: 0;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#nav a {
+    float: left;
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 15px 20px;
+    transition: background-color 0.3s ease;
+    border-right: 1px solid #2c3e50;
+}
+
+#nav a:hover {
+    background-color: #2c3e50;
+    color: #1abc9c;
+}
+
+#nav a:last-child {
+    border-right: none;
+}
+
+/* Main Content Area */
+#middle {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: white;
+    min-height: calc(100vh - 200px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Sidebar */
+#sidebar {
+    float: left;
+    width: 25%;
+    background-color: #ecf0f1;
+    padding: 20px;
+    min-height: 500px;
+    border-right: 2px solid #bdc3c7;
+}
+
+#sidebar h2 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+    font-size: 18px;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 5px;
+}
+
+.menu-item {
+    margin-bottom: 8px;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.menu-item a {
+    display: block;
+    color: #2c3e50;
+    text-decoration: none;
+    padding: 10px 12px;
+    transition: all 0.3s ease;
+    background-color: white;
+    border-left: 3px solid transparent;
+}
+
+.menu-item a:hover {
+    background-color: #3498db;
+    color: white;
+    border-left: 3px solid #1abc9c;
+    transform: translateX(5px);
+}
+
+.hint {
+    margin-top: 20px;
+    font-size: 12px;
+    color: #7f8c8d;
+    font-style: italic;
+    text-align: center;
+    padding: 10px;
+    background-color: #d5dbdb;
+    border-radius: 4px;
+}
+
+/* Content Area */
+#content {
+    float: right;
+    width: 75%;
+    padding: 30px;
+    background-color: white;
+}
+
+#content h2 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+    font-size: 24px;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 8px;
+}
+
+#content p {
+    margin-bottom: 15px;
+    text-align: justify;
+    line-height: 1.7;
+}
+
+#content ul,
+#content ol {
+    margin: 15px 0 15px 20px;
+}
+
+#content li {
+    margin-bottom: 8px;
+    line-height: 1.6;
+}
+
+#content strong {
+    color: #2c3e50;
+}
+
+/* Content Sections */
+#content>div {
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ecf0f1;
+}
+
+#content>div:last-child {
+    border-bottom: none;
+}
+
+/* Card Component */
+.card {
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.card ol {
+    margin-left: 20px;
+}
+
+.card li {
+    margin-bottom: 10px;
+    padding: 5px 0;
+}
+
+/* Footer */
+#footer {
+    clear: both;
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    #nav a {
+        float: none;
+        display: block;
+        text-align: center;
+        border-right: none;
+        border-bottom: 1px solid #2c3e50;
+    }
+
+    #sidebar,
+    #content {
+        float: none;
+        width: 100%;
+    }
+
+    #sidebar {
+        border-right: none;
+        border-bottom: 2px solid #bdc3c7;
+    }
+
+    .logo-text {
+        font-size: 24px;
+    }
+
+    #header h1 {
+        font-size: 20px;
+    }
+}
+
+/* Additional Styling for Better Visual Appeal */
+a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #2980b9;
+}
+
+/* Smooth scrolling for anchor links */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Focus styles for accessibility */
+a:focus,
+button:focus {
+    outline: 2px solid #3498db;
+    outline-offset: 2px;
+}
