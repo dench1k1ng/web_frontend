@@ -1,0 +1,399 @@
+/* General Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #333;
+    line-height: 1.6;
+    padding: 0 20px;
+    min-height: 100vh;
+}
+
+/* Header */
+#header {
+    background: linear-gradient(135deg, #2c3e50, #3498db);
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    margin-bottom: 30px;
+    border-radius: 0 0 15px 15px;
+}
+
+#header h1 {
+    margin: 0;
+    font-size: 42px;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+#header h2 {
+    margin: 8px 0;
+    font-size: 24px;
+    opacity: 0.9;
+    font-weight: 300;
+}
+
+/* Main Content */
+#content {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+}
+
+h3 {
+    font-size: 28px;
+    margin: 40px 0 25px 0;
+    color: #2c3e50;
+    text-align: center;
+    position: relative;
+}
+
+h3::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(135deg, #3498db, #2c3e50);
+    margin: 10px auto;
+    border-radius: 2px;
+}
+
+/* Intro paragraph */
+#content>p {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #555;
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+    padding: 25px;
+    border-radius: 10px;
+    border-left: 5px solid #3498db;
+}
+
+/* TABLE STYLING */
+#table-heading {
+    background: linear-gradient(135deg, #e74c3c, #c0392b);
+    color: white;
+    padding: 20px;
+    border-radius: 10px 10px 0 0;
+    margin-bottom: 0;
+    font-size: 22px;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+#table-heading::after {
+    display: none;
+}
+
+#grades-table,
+#schedule-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 40px;
+    background-color: #ffffff;
+    border-radius: 0 0 10px 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+#grades-table thead,
+#schedule-table thead {
+    background: linear-gradient(135deg, #34495e, #2c3e50);
+    color: white;
+}
+
+#grades-table th,
+#grades-table td,
+#schedule-table th,
+#schedule-table td {
+    border: 1px solid #ddd;
+    padding: 15px 20px;
+    text-align: center;
+    font-size: 16px;
+}
+
+#grades-table th,
+#schedule-table th {
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 14px;
+}
+
+/* Alternate row colors using nth-child */
+#grades-table tbody tr:nth-child(odd),
+#schedule-table tbody tr:nth-child(odd) {
+    background-color: #f8f9fa;
+}
+
+#grades-table tbody tr:nth-child(even),
+#schedule-table tbody tr:nth-child(even) {
+    background-color: #ffffff;
+}
+
+/* Highlight row with class */
+#grades-table .highlight-row {
+    background: linear-gradient(135deg, #f39c12, #e67e22) !important;
+    color: white !important;
+    font-weight: bold;
+    border: 2px solid #d35400;
+    transform: scale(1.02);
+}
+
+#grades-table .highlight-row td {
+    border-color: #d35400;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Hover effect for table rows */
+#grades-table tbody tr:hover,
+#schedule-table tbody tr:hover {
+    background: linear-gradient(135deg, #ecf0f1, #bdc3c7) !important;
+    transform: translateY(-2px);
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Schedule table specific styling */
+#schedule-table {
+    margin-top: 30px;
+}
+
+/* Hobbies Section */
+.hobbies-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin: 30px 0;
+}
+
+.hobby-list,
+.websites-list {
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.hobby-list h4,
+.websites-list h4 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+    font-size: 18px;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 8px;
+}
+
+.hobby-list ol,
+.websites-list ul {
+    margin-left: 25px;
+}
+
+.hobby-list li,
+.websites-list li {
+    margin-bottom: 8px;
+    font-size: 16px;
+}
+
+.websites-list a {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.websites-list a:hover {
+    color: #e74c3c;
+    text-decoration: underline;
+}
+
+/* FORM STYLING */
+#feedback-form {
+    background: linear-gradient(135deg, #34495e, #2c3e50);
+    width: 700px;
+    margin: 30px auto;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    color: white;
+}
+
+#feedback-form label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #ecf0f1;
+    font-size: 16px;
+}
+
+#feedback-form input[type="text"],
+#feedback-form input[type="email"],
+#feedback-form select,
+#feedback-form textarea {
+    width: 100%;
+    padding: 15px 20px;
+    margin-bottom: 25px;
+    border: 2px solid #bdc3c7;
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: #ffffff;
+    color: #2c3e50;
+    transition: all 0.3s ease;
+    font-family: inherit;
+}
+
+#feedback-form input[type="text"]:focus,
+#feedback-form input[type="email"]:focus,
+#feedback-form select:focus,
+#feedback-form textarea:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+    transform: translateY(-2px);
+}
+
+/* Radio button styling */
+.radio-group {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 25px;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 8px;
+}
+
+#feedback-form input[type="radio"] {
+    width: auto;
+    margin-right: 10px;
+    margin-bottom: 0;
+    transform: scale(1.2);
+}
+
+.radio-label {
+    font-weight: normal !important;
+    margin-bottom: 0 !important;
+    display: inline !important;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Submit button styling */
+.submit-btn {
+    background: linear-gradient(135deg, #e74c3c, #c0392b);
+    color: white;
+    padding: 18px 40px;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 15px rgba(231, 76, 60, 0.4);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.submit-btn:hover {
+    background: linear-gradient(135deg, #c0392b, #a93226);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(231, 76, 60, 0.6);
+}
+
+.submit-btn:active {
+    transform: translateY(-1px);
+}
+
+/* Footer */
+#footer {
+    text-align: center;
+    padding: 25px;
+    margin-top: 50px;
+    font-size: 16px;
+    background: linear-gradient(135deg, #2c3e50, #34495e);
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #content {
+        padding: 25px;
+        margin: 0 10px;
+    }
+
+    #feedback-form {
+        width: 100%;
+        padding: 25px;
+    }
+
+    .hobbies-section {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    #grades-table,
+    #schedule-table {
+        font-size: 14px;
+    }
+
+    #grades-table th,
+    #grades-table td,
+    #schedule-table th,
+    #schedule-table td {
+        padding: 10px 12px;
+    }
+
+    .radio-group {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    h1,
+    h2,
+    h3 {
+        font-size: 20px;
+    }
+
+    #header h1 {
+        font-size: 32px;
+    }
+
+    #header h2 {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    #grades-table th,
+    #grades-table td,
+    #schedule-table th,
+    #schedule-table td {
+        padding: 8px 10px;
+        font-size: 12px;
+    }
+
+    #feedback-form {
+        padding: 20px;
+    }
+
+    #content {
+        padding: 20px;
+    }
+}

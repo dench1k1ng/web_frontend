@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Denis Shin - Student Profile</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <div id="nav" style="background: #333; padding: 15px 0; text-align: center; margin-bottom: 20px;">
+        <a href="../index.html"
+            style="color: white; text-decoration: none; padding: 12px 20px; margin: 0 5px; border-radius: 5px;">Task 1:
+            Layout</a>
+        <a href="../exercise1/index.html"
+            style="color: white; text-decoration: none; padding: 12px 20px; margin: 0 5px; border-radius: 5px;">Task 2:
+            Tribute</a>
+        <a href="index.html"
+            style="color: white; text-decoration: none; padding: 12px 20px; margin: 0 5px; border-radius: 5px; background: #555;">Task
+            3: Table & Form</a>
+        <a href="../task4_wireframe/index.html"
+            style="color: white; text-decoration: none; padding: 12px 20px; margin: 0 5px; border-radius: 5px;">Task 4:
+            Wireframes</a>
+    </div>
+
+    <!-- HEADER -->
+    <div id="header">
+        <h1>Denis Shin</h1>
+        <h2>SE-2434 Student Profile</h2>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="content">
+        <h3>About Me</h3>
+        <p>
+            Hello! I am Denis Shin, a Korean student at AITU (Astana IT University). I'm currently studying in group
+            SE-2434,
+            focusing on software engineering and web technologies. I'm passionate about fitness, martial arts, coding,
+            and music.
+        </p>
+
+        <!-- Table for Student Grades -->
+        <h3 id="table-heading">My Academic Performance</h3>
+        <table id="grades-table">
+            <thead>
+                <tr>
+                    <th>Subject</th>
+                    <th>Grade</th>
+                    <th>Semester</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Operating Systems</td>
+                    <td>A</td>
+                    <td>Fall 2025</td>
+                    <td>Completed</td>
+                </tr>
+                <tr class="highlight-row">
+                    <td>WEB Technologies 1</td>
+                    <td>A+</td>
+                    <td>Fall 2025</td>
+                    <td>In Progress</td>
+                </tr>
+                <tr>
+                    <td>Introduction to Finance</td>
+                    <td>B+</td>
+                    <td>Fall 2025</td>
+                    <td>Completed</td>
+                </tr>
+                <tr>
+                    <td>Programming Fundamentals</td>
+                    <td rowspan="2">A</td>
+                    <td>Spring 2024</td>
+                    <td>Completed</td>
+                </tr>
+                <tr>
+                    <td>Data Structures</td>
+                    <td>Spring 2024</td>
+                    <td>Completed</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Weekly Schedule -->
+        <h3>My Weekly Class Schedule</h3>
+        <table id="schedule-table">
+            <thead>
+                <tr>
+                    <th>Subject</th>
+                    <th>Day</th>
+                    <th>Time</th>
+                    <th>Type</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Operating Systems</td>
+                    <td>Monday</td>
+                    <td>08:00–08:50</td>
+                    <td>Practice</td>
+                </tr>
+                <tr>
+                    <td>Operating Systems</td>
+                    <td>Tuesday</td>
+                    <td>15:00–15:50</td>
+                    <td>Practice</td>
+                </tr>
+                <tr>
+                    <td>WEB Technologies 1</td>
+                    <td>Wednesday</td>
+                    <td>16:00–16:50</td>
+                    <td>Lecture</td>
+                </tr>
+                <tr>
+                    <td>Introduction to Finance</td>
+                    <td>Friday</td>
+                    <td>12:00–12:50</td>
+                    <td>Practice</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Personal Information -->
+        <h3>My Hobbies & Interests</h3>
+        <div class="hobbies-section">
+            <div class="hobby-list">
+                <h4>Main Hobbies:</h4>
+                <ol>
+                    <li>GYM & Fitness</li>
+                    <li>Martial Arts</li>
+                    <li>Coding & Programming</li>
+                    <li>Music</li>
+                </ol>
+            </div>
+            <div class="websites-list">
+                <h4>Frequently Used Websites:</h4>
+                <ul>
+                    <li><a href="https://www.google.com" target="_blank">Google</a></li>
+                    <li><a href="https://www.youtube.com" target="_blank">YouTube</a></li>
+                    <li><a href="https://lms.astanait.edu.kz/" target="_blank">Moodle (AITU)</a></li>
+                    <li><a href="https://github.com/dench1k1ng" target="_blank">My GitHub</a></li>
+                    <li><a href="https://stackoverflow.com" target="_blank">Stack Overflow</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Feedback Form -->
+        <h3>Contact & Feedback Form</h3>
+        <form id="feedback-form" action="#" method="POST">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="role">Your Role:</label>
+            <select id="role" name="role" required>
+                <option value="">Select your role</option>
+                <option value="student">Student</option>
+                <option value="teacher">Teacher</option>
+                <option value="other">Other</option>
+            </select>
+
+            <label>Would you like to collaborate on a project?</label>
+            <div class="radio-group">
+                <input type="radio" id="collaborate-yes" name="collaborate" value="yes" required>
+                <label for="collaborate-yes" class="radio-label">Yes</label>
+
+                <input type="radio" id="collaborate-no" name="collaborate" value="no" required>
+                <label for="collaborate-no" class="radio-label">No</label>
+            </div>
+
+            <label for="comments">Message/Comments:</label>
+            <textarea id="comments" name="comments" rows="4"
+                placeholder="Share your thoughts or project ideas..."></textarea>
+
+            <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+    </div>
+
+    <!-- FOOTER -->
+    <div id="footer">
+        <p>© 2025 Denis Shin - SE-2434 | AITU Student Portfolio</p>
+    </div>
+</body>
+
+</html>
