@@ -83,13 +83,13 @@ body {
 #nav {
     background-color: #34495e;
     padding: 0;
+    text-align: center;
     overflow: hidden;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 #nav a {
-    float: left;
-    display: block;
+    display: inline-block;
     color: white;
     text-decoration: none;
     padding: 15px 20px;

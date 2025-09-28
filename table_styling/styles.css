@@ -254,6 +254,11 @@ h3::after {
     font-family: inherit;
 }
 
+/* Prevent textarea from being resized */
+#feedback-form textarea {
+    resize: vertical;
+}
+
 #feedback-form input[type="text"]:focus,
 #feedback-form input[type="email"]:focus,
 #feedback-form select:focus,
@@ -397,3 +402,4 @@ h3::after {
         padding: 20px;
     }
 }
+
