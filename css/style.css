@@ -1,0 +1,639 @@
+/* ========================================
+   POKEMON PORTFOLIO UNIFIED DESIGN
+   Created by Denis Shin - Assignment #3
+   ======================================== */
+
+/* === GLOBAL RESET === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    min-height: 100vh;
+}
+
+/* === POKEMON NAVIGATION === */
+.navbar,
+.portfolio-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(45deg, #ffcb05, #ff6b35);
+    padding: 20px 30px;
+    box-shadow: 0 4px 15px rgba(255, 203, 5, 0.3);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar .logo,
+.portfolio-header .logo {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #2a75bb;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #2a75bb;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.nav-links a:hover {
+    background: rgba(255, 255, 255, 0.9);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* === POKEMON CARDS === */
+.card-row {
+    display: flex;
+    gap: 30px;
+    padding: 40px 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    flex: 1;
+    min-width: 300px;
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    border: 3px solid transparent;
+    background-clip: padding-box;
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 15px 40px rgba(255, 203, 5, 0.4);
+    border-color: #ffcb05;
+}
+
+.card img {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    margin-bottom: 15px;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+}
+
+.card h3 {
+    color: #2a75bb;
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+}
+
+.card p {
+    color: #666;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.card button {
+    background: linear-gradient(45deg, #2a75bb, #1a5490);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+}
+
+.card button:hover {
+    background: linear-gradient(45deg, #ffcb05, #ff6b35);
+    color: #333;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 203, 5, 0.5);
+}
+
+/* === FLEXBOX HERO SECTION === */
+.flexbox-hero {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 80px 20px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hero-content p {
+    font-size: 1.3rem;
+    opacity: 0.9;
+}
+
+/* === FLEXBOX DEMONSTRATIONS === */
+.flexbox-demos {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.flexbox-demos h2 {
+    color: #2a75bb;
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+}
+
+.demo-container {
+    margin-bottom: 50px;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.demo-container h3 {
+    color: #333;
+    margin-bottom: 25px;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.flex-row-demo {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.flex-column-demo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.flex-space-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    margin: 15px 0;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    margin: 15px 0;
+}
+
+.flex-align-demo {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    height: 150px;
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 15px 0;
+}
+
+/* === POKEMON ITEMS === */
+.pokemon-item {
+    background: linear-gradient(45deg, #ffcb05, #ff6b35);
+    color: #2a75bb;
+    padding: 15px 25px;
+    border-radius: 25px;
+    font-weight: bold;
+    text-align: center;
+    box-shadow: 0 6px 15px rgba(255, 203, 5, 0.3);
+    transition: all 0.3s ease;
+    min-width: 140px;
+    cursor: pointer;
+}
+
+.pokemon-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(255, 203, 5, 0.5);
+}
+
+.pokemon-badge {
+    background: linear-gradient(45deg, #2a75bb, #1a5490);
+    color: white;
+    padding: 12px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(42, 117, 187, 0.3);
+    transition: all 0.3s ease;
+}
+
+.pokemon-badge:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(42, 117, 187, 0.4);
+}
+
+.pokemon-level {
+    background: linear-gradient(45deg, #27ae60, #2ecc71);
+    color: white;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(39, 174, 96, 0.3);
+}
+
+.pokemon-level.small {
+    width: 60px;
+    height: 60px;
+    font-size: 0.9rem;
+}
+
+.pokemon-level.medium {
+    width: 80px;
+    height: 100px;
+    font-size: 1.1rem;
+}
+
+.pokemon-level.large {
+    width: 100px;
+    height: 140px;
+    font-size: 1.3rem;
+}
+
+/* === GRID LAYOUT === */
+.grid-layout {
+    display: grid;
+    grid-template-areas:
+        "header header"
+        "sidebar content"
+        "footer footer";
+    grid-template-columns: 250px 1fr;
+    min-height: 70vh;
+    margin: 30px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+    grid-area: header;
+    background: linear-gradient(45deg, #2a75bb, #1a5490);
+    color: white;
+    padding: 25px;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    background: #0446d4;
+    color: white;
+    padding: 25px;
+}
+
+.sidebar h3 {
+    margin-bottom: 20px;
+    font-size: 1.3rem;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar li {
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.sidebar li:hover {
+    transform: translateX(10px);
+    color: #ffcb05;
+}
+
+.content {
+    grid-area: content;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.content h2 {
+    color: #2a75bb;
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+.footer {
+    grid-area: footer;
+    background: linear-gradient(45deg, #ff6b35, #f7931e);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/* === GALLERY === */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.img-box {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.img-box:hover {
+    transform: translateY(-5px);
+}
+
+.img-box img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.img-box span {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.img-box:hover span {
+    opacity: 1;
+}
+
+/* === PORTFOLIO PAGE === */
+.portfolio-main {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+    padding: 40px 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    min-height: 70vh;
+}
+
+.projects {
+    grid-column: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.info {
+    grid-column: 2;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    height: fit-content;
+    position: sticky;
+    top: 120px;
+}
+
+.project-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    border-left: 5px solid #2a75bb;
+    transition: all 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(42, 117, 187, 0.3);
+    border-left-color: #ffcb05;
+}
+
+.project-card h3 {
+    color: #2a75bb;
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+}
+
+.project-card p {
+    flex-grow: 1;
+    margin-bottom: 20px;
+    line-height: 1.7;
+    color: #666;
+}
+
+.project-card button {
+    align-self: flex-start;
+    background: linear-gradient(45deg, #2a75bb, #1a5490);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.project-card button:hover {
+    background: linear-gradient(45deg, #ffcb05, #ff6b35);
+    color: #333;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 203, 5, 0.4);
+}
+
+/* === INFO SIDEBAR === */
+.info h3 {
+    color: #2a75bb;
+    border-bottom: 3px solid #ffcb05;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    font-size: 1.3rem;
+}
+
+.info h4 {
+    color: #2a75bb;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+.student-info {
+    background: rgba(255, 203, 5, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    border-left: 4px solid #ffcb05;
+    margin-bottom: 25px;
+}
+
+.student-info p {
+    margin: 8px 0;
+    color: #333;
+    font-weight: 500;
+}
+
+.pokemon-journey {
+    background: #667eea;
+    color: white;
+    padding: 20px;
+    border-radius: 15px;
+    margin: 20px 0;
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+}
+
+.pokemon-journey p {
+    margin: 10px 0;
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.pokemon-journey p:last-child {
+    border-bottom: none;
+}
+
+/* === FOOTERS === */
+.main-footer,
+.page1-footer,
+.page2-footer,
+.portfolio-footer {
+    background: linear-gradient(45deg, #2a75bb, #1a5490);
+    color: white;
+    text-align: center;
+    padding: 25px;
+    margin-top: 40px;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+/* === RESPONSIVE DESIGN === */
+@media (max-width: 768px) {
+
+    .navbar,
+    .portfolio-header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+    }
+
+    .nav-links {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .card-row {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .portfolio-main {
+        grid-template-columns: 1fr;
+        padding: 20px;
+        gap: 25px;
+    }
+
+    .info {
+        order: -1;
+        position: static;
+    }
+
+    .grid-layout {
+        grid-template-areas:
+            "header"
+            "sidebar"
+            "content"
+            "footer";
+        grid-template-columns: 1fr;
+        margin: 15px;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        padding: 20px;
+    }
+
+    .flexbox-demos {
+        padding: 20px 10px;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .navbar .logo,
+    .portfolio-header .logo {
+        font-size: 1rem;
+    }
+
+    .nav-links a {
+        padding: 8px 12px;
+        font-size: 0.9rem;
+    }
+
+    .card {
+        min-width: auto;
+        padding: 20px;
+    }
+
+    .project-card {
+        padding: 20px;
+    }
+}

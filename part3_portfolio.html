@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Part 3 - Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- Task 4: Header with Flexbox navigation -->
+    <header class="portfolio-header">
+        <div class="logo">Denis' Pokemon Portfolio</div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="part1_flexbox.html">Part 1: Flexbox</a></li>
+                <li><a href="part2_grid.html">Part 2: Grid</a></li>
+                <li><a href="part3_portfolio.html">Part 3: Portfolio</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Task 4: Main section using CSS Grid -->
+    <main class="portfolio-main">
+        <!-- Projects area on the left (2fr) -->
+        <section class="projects">
+            <!-- Each project card uses Flexbox internally -->
+            <div class="project-card">
+                <h3>Web Development Badge</h3>
+                <p>Mastered HTML5, CSS3, and JavaScript like catching Fire-type Pokemon! Built responsive websites with
+                    modern design principles and clean code structure.</p>
+                <button>View Projects</button>
+            </div>
+
+            <div class="project-card">
+                <h3>Flexbox Master Certification</h3>
+                <p>Electric-type skills in flexible layouts! Can align and distribute elements perfectly like Pikachu's
+                    thunderbolt attacks in battle.</p>
+                <button>View Skills</button>
+            </div>
+
+            <div class="project-card">
+                <h3>CSS Grid Champion Title</h3>
+                <p>Grass-type growth in grid layouts! Building complex responsive designs with the precision of a
+                    Pokemon Gym Leader's strategy.</p>
+                <button>View Work</button>
+            </div>
+
+            <div class="project-card">
+                <h3>AITU Academic Excellence</h3>
+                <p>Academic achievements in Software Engineering studies. Training hard at AITU to become the very best
+                    web developer, like no one ever was!</p>
+                <button>View Achievements</button>
+            </div>
+        </section>
+
+        <!-- Info sidebar on the right (1fr) -->
+        <aside class="info">
+            <h3>About Trainer Denis</h3>
+
+            <div class="student-info">
+                <p><strong>Trainer Name:</strong> Denis Shin</p>
+                <p><strong>Pokemon Center:</strong> AITU (Astana IT University)</p>
+                <p><strong>Trainer Group:</strong> SE-2434</p>
+                <p><strong>Home Region:</strong> Almaty, Kazakhstan</p>
+                <p><strong>Specialty:</strong> Software Engineering</p>
+            </div>
+
+            <h4>Pokemon-Style Technical Skills</h4>
+            <ul class="skills-list pokemon-skills">
+                <li class="fire-type">HTML5 Fire Master</li>
+                <li class="water-type">CSS3 Water Expert</li>
+                <li class="electric-type">JavaScript Electric Trainer</li>
+                <li class="grass-type">Responsive Design Growth</li>
+                <li class="psychic-type">Git & GitHub Psychic Powers</li>
+            </ul>
+
+            <h4>My Pokemon Journey</h4>
+            <div class="pokemon-journey">
+                <p><strong>Pallet Town:</strong> Started as a beginner trainer</p>
+                <p><strong>Flexbox Gym:</strong> Defeated the Gym Leader with perfect alignment skills</p>
+                <p><strong>CSS Grid Elite Four:</strong> Conquered complex layout challenges</p>
+                <p><strong>Current Goal:</strong> Training for JavaScript Championship battle!</p>
+            </div>
+
+            <h4>Trainer's Goals</h4>
+            <p>Passionate about creating beautiful, functional web experiences and becoming a skilled full-stack
+                developer. My dream is to combine the power of Pokemon inspiration with cutting-edge web technologies!
+            </p>
+        </aside>
+    </main>
+
+    <!-- Footer spans across the bottom -->
+    <footer class="portfolio-footer">
+        © 2025 Denis Shin - Pokemon Web Developer Trainer | SE-2434
+    </footer>
+</body>
+
+</html>

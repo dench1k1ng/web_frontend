@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Part 1 - Flexbox</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="logo">Pokédex Flexbox</div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="part1_flexbox.html">Part 1: Flexbox</a></li>
+                <li><a href="part2_grid.html">Part 2: Grid</a></li>
+                <li><a href="part3_portfolio.html">Part 3: Portfolio</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Flexbox Demo Section -->
+    <section class="flexbox-hero">
+        <div class="hero-content">
+            <h1>Flexbox Pokémon Arena</h1>
+            <p>Master different Flexbox layouts with Pokémon!</p>
+        </div>
+    </section>
+
+    <!-- Flexbox Direction Demo -->
+    <section class="flexbox-demos">
+        <h2>Flex Direction Examples</h2>
+
+        <div class="demo-container">
+            <h3>Row Direction (default)</h3>
+            <div class="flex-row-demo">
+                <div class="pokemon-item">Charmander</div>
+                <div class="pokemon-item">Squirtle</div>
+                <div class="pokemon-item">Bulbasaur</div>
+            </div>
+        </div>
+
+        <div class="demo-container">
+            <h3>Column Direction</h3>
+            <div class="flex-column-demo">
+                <div class="pokemon-item">Pikachu</div>
+                <div class="pokemon-item">Eevee</div>
+                <div class="pokemon-item">Snorlax</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Justify Content Demo -->
+    <section class="flexbox-demos">
+        <h2>Justify Content Examples</h2>
+
+        <div class="demo-container">
+            <h3>Space Between</h3>
+            <div class="flex-space-between">
+                <div class="pokemon-badge">Gym Leader</div>
+                <div class="pokemon-badge">Elite Four</div>
+                <div class="pokemon-badge">Champion</div>
+            </div>
+        </div>
+
+        <div class="demo-container">
+            <h3>Center</h3>
+            <div class="flex-center">
+                <div class="pokemon-badge">Master Trainer</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Align Items Demo -->
+    <section class="flexbox-demos">
+        <h2>Align Items Examples</h2>
+
+        <div class="demo-container">
+            <h3>Flex Start, Center, Flex End</h3>
+            <div class="flex-align-demo">
+                <div class="pokemon-level small">Lv. 5</div>
+                <div class="pokemon-level medium">Lv. 25</div>
+                <div class="pokemon-level large">Lv. 50</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Original Card Row for comparison -->
+    <section class="card-row">
+        <div class="card">
+            <img src="img/pikachu.png" alt="Pikachu">
+            <h3>Pikachu</h3>
+            <p>Electric type Pokémon. Loves thunderbolts</p>
+            <button>Catch</button>
+        </div>
+        <div class="card">
+            <img src="img/charmander.png" alt="Charmander">
+            <h3>Charmander</h3>
+            <p>Fire type Pokémon. Tail flame shows its life energy</p>
+            <button>Catch</button>
+        </div>
+        <div class="card">
+            <img src="img/bulbasaur.png" alt="Bulbasaur">
+            <h3>Bulbasaur</h3>
+            <p>Grass/Poison type Pokémon. Always carries a seed</p>
+            <button>Catch</button>
+        </div>
+    </section>
+    <footer class="page1-footer">© 2025 Denis Shin</footer>
+
+</body>
+
+</html>
