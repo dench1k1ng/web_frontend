@@ -1,46 +1,360 @@
-<!DOCTYPE html>
-<html lang="en">
+    <!DOCTYPE html>
+    <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <title>Part 1 - Flexbox</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Assignment #5 - Forms and Validation</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <style>
+            /* Optional: Add some space and separation for clarity */
+            .container {
+                margin-top: 40px;
+                margin-bottom: 80px;
+            }
 
-<body>
-    <header class="navbar">
-        <div class="logo">Pokédex Denis</div>
-        <nav>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="part1_flexbox.html">Part 1: Flexbox</a></li>
-                <li><a href="part2_grid.html">Part 2: Grid</a></li>
-                <li><a href="part3_portfolio.html">Part 3: Portfolio</a></li>
-            </ul>
-        </nav>
-    </header>
+            hr {
+                margin-top: 40px;
+                margin-bottom: 40px;
+            }
 
-    <section class="card-row">
-        <div class="card">
-            <img src="img/pikachu.png" alt="Pikachu">
-            <h3>Pikachu</h3>
-            <p>Electric type Pokémon. My coding companion with thunderbolt inspiration!</p>
-            <button>Choose Partner</button>
+            h2 {
+                margin-top: 25px;
+                margin-bottom: 15px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="container">
+            <h1>Assignment #5: Forms and Validation</h1>
+            <p><strong>Student:</strong> Shin Denis</p>
+            <p><strong>Group:</strong> SE-2434</p>
+            <hr>
+
+            <!-- ==================== PART 1: BASIC HTML FORMS ==================== -->
+            <h2>Part 1. Basic HTML Forms</h2>
+
+            <!-- TASK 0: Simple Contact Form (Pure HTML without Bootstrap styling) -->
+            <h3>Task 0. Simple Contact Form</h3>
+            <form action="#" method="post" class="p-3 border rounded">
+                <div class="mb-3">
+                    <label for="name0">Name (text input):</label><br>
+                    <input type="text" id="name0" name="name0" style="width: 100%; padding: 8px; border: 1px solid #ccc;">
+                </div>
+                <div class="mb-3">
+                    <label for="email0">Email (email input):</label><br>
+                    <input type="email" id="email0" name="email0"
+                        style="width: 100%; padding: 8px; border: 1px solid #ccc;">
+                </div>
+                <div class="mb-3">
+                    <label for="message0">Message (textarea):</label><br>
+                    <textarea id="message0" name="message0" rows="4"
+                        style="width: 100%; padding: 8px; border: 1px solid #ccc;"></textarea>
+                </div>
+                <button type="submit" class="btn btn-dark">Submit</button>
+            </form>
+
+            <!-- TASK 1: Form with HTML5 Validation -->
+            <h3>Task 1. Form with HTML5 Validation</h3>
+            <p class="text-muted mt-2">Test by submitting empty or an invalid email format (e.g., just "test").</p>
+            <form action="#" method="post" class="p-3 border rounded">
+                <div class="mb-3">
+                    <label for="name1" class="form-label">Name:</label>
+                    <input type="text" id="name1" name="name1" class="form-control" required maxlength="50">
+                </div>
+                <div class="mb-3">
+                    <label for="email1" class="form-label">Email:</label>
+                    <input type="email" id="email1" name="email1" class="form-control" required>
+                </div>
+                <div class="mb-3">
+                    <label for="message1" class="form-label">Message:</label>
+                    <textarea id="message1" name="message1" rows="4" class="form-control" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-dark">Submit with HTML5 Validation</button>
+            </form>
+
+            <hr>
+
+            <!-- ==================== PART 2: BOOTSTRAP FORMS ==================== -->
+            <h2>Part 2. Bootstrap Forms</h2>
+
+            <!-- TASK 2: Bootstrap Form Styling -->
+            <h3>Task 2. Bootstrap Form Styling</h3>
+            <p class="text-muted mt-2">Uses Bootstrap classes (`form-control`, `row`, `col-md-6`) for styling and layout.
+            </p>
+            <form action="#" method="post" class="p-3 border rounded">
+                <div class="row g-3 mb-3">
+                    <div class="col-md-6">
+                        <label for="name2" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="name2" name="name2" placeholder="Enter your full name">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="email2" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email2" name="email2" placeholder="name@example.com">
+                        <div id="emailHelp2" class="form-text">We'll never share your email with anyone else.</div>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="message2" class="form-label">Message</label>
+                    <textarea class="form-control" id="message2" name="message2" rows="4"
+                        placeholder="Your message here..."></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Send Message (Bootstrap Styled)</button>
+            </form>
+
+            <!-- TASK 3: Bootstrap Validation Styles -->
+            <h3>Task 3. Bootstrap Validation Styles</h3>
+            <p class="text-muted mt-2">Uses Bootstrap's custom validation feedback (`is-valid`, `is-invalid`,
+                `invalid-feedback`).</p>
+            <form class="row g-3 needs-validation p-3 border rounded" id="task3Form" action="#" method="post" novalidate>
+                <div class="col-md-6">
+                    <label for="name3" class="form-label">Name</label>
+                    <input type="text" class="form-control" id="name3" name="name3" required>
+                    <div class="invalid-feedback">
+                        Name is required.
+                    </div>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <label for="email3" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email3" name="email3" required>
+                    <div class="invalid-feedback">
+                        Please provide a valid email address.
+                    </div>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+                <div class="col-12">
+                    <label for="message3" class="form-label">Message</label>
+                    <textarea class="form-control" id="message3" name="message3" rows="3" required></textarea>
+                    <div class="invalid-feedback">
+                        A message is required.
+                    </div>
+                    <div class="valid-feedback">
+                        Great message!
+                    </div>
+                </div>
+                <div class="col-12">
+                    <button class="btn btn-success" type="submit">Submit (Bootstrap Validated)</button>
+                </div>
+            </form>
+
+            <hr>
+
+            <!-- ==================== PART 3: ADVANCED FORM PROJECT ==================== -->
+            <h2>Part 3. Advanced Form Project</h2>
+
+            <!-- TASK 4: Registration Form -->
+            <h3>Task 4. Registration Form (Responsive and Validated)</h3>
+            <form class="row g-3 needs-validation p-3 border rounded" id="registrationForm" action="#" method="post"
+                novalidate>
+                <!-- First Name and Last Name -->
+                <div class="col-md-6">
+                    <label for="regFirstName" class="form-label">First Name</label>
+                    <input type="text" class="form-control" id="regFirstName" required>
+                    <div class="invalid-feedback">Please provide your first name.</div>
+                    <div class="valid-feedback">Perfect!</div>
+                </div>
+                <div class="col-md-6">
+                    <label for="regLastName" class="form-label">Last Name</label>
+                    <input type="text" class="form-control" id="regLastName" required>
+                    <div class="invalid-feedback">Please provide your last name.</div>
+                    <div class="valid-feedback">Perfect!</div>
+                </div>
+
+                <!-- Email -->
+                <div class="col-12">
+                    <label for="regEmail" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="regEmail" required>
+                    <div class="invalid-feedback">Please enter a valid email.</div>
+                    <div class="valid-feedback">Email looks good!</div>
+                    <div class="form-text">Your email will be your login ID.</div>
+                </div>
+
+                <!-- Password and Confirm Password -->
+                <div class="col-md-6">
+                    <label for="regPassword" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="regPassword" minlength="8" required>
+                    <div class="invalid-feedback">Password must be at least 8 characters.</div>
+                    <div class="valid-feedback">Strong password!</div>
+                </div>
+                <div class="col-md-6">
+                    <label for="regConfirmPassword" class="form-label">Confirm Password</label>
+                    <input type="password" class="form-control" id="regConfirmPassword" minlength="8" required>
+                    <div class="invalid-feedback" id="confirmPasswordFeedback">Please confirm your password (must be 8+
+                        chars).</div>
+                    <div class="valid-feedback">Passwords match!</div>
+                </div>
+
+                <!-- Gender (Radio Buttons) -->
+                <div class="col-12 mt-3">
+                    <label class="form-label">Gender (Required)</label>
+                    <div class="d-flex gap-3">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="regGender" id="genderMale" value="male"
+                                required>
+                            <label class="form-check-label" for="genderMale">Male</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="regGender" id="genderFemale" value="female"
+                                required>
+                            <label class="form-check-label" for="genderFemale">Female</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="regGender" id="genderOther" value="other"
+                                required>
+                            <label class="form-check-label" for="genderOther">Other</label>
+                        </div>
+                    </div>
+                    <div class="invalid-feedback d-block" id="genderError" style="display: none !important;">
+                        Please select a gender.
+                    </div>
+                </div>
+
+                <!-- Hobbies (Checkboxes) -->
+                <div class="col-12 mt-3">
+                    <label class="form-label">Hobbies</label>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="hobbyReading" value="reading">
+                        <label class="form-check-label" for="hobbyReading">Reading</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="hobbySports" value="sports">
+                        <label class="form-check-label" for="hobbySports">Sports</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="hobbyCoding" value="coding">
+                        <label class="form-check-label" for="hobbyCoding">Coding</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="hobbyMusic" value="music">
+                        <label class="form-check-label" for="hobbyMusic">Music</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="hobbyTravel" value="travel">
+                        <label class="form-check-label" for="hobbyTravel">Travel</label>
+                    </div>
+                </div>
+
+                <!-- Country (Dropdown) -->
+                <div class="col-md-6">
+                    <label for="regCountry" class="form-label">Country</label>
+                    <select class="form-select" id="regCountry" required>
+                        <option selected disabled value="">Choose...</option>
+                        <option value="KZ">Kazakhstan</option>
+                        <option value="US">United States</option>
+                        <option value="UK">United Kingdom</option>
+                        <option value="CA">Canada</option>
+                        <option value="RU">Russia</option>
+                        <option value="DE">Germany</option>
+                        <option value="FR">France</option>
+                        <option value="OTH">Other</option>
+                    </select>
+                    <div class="invalid-feedback">Please select your country.</div>
+                    <div class="valid-feedback">Good choice!</div>
+                </div>
+
+                <!-- Submit and Reset Buttons -->
+                <div class="col-12 mt-4">
+                    <button class="btn btn-primary" type="submit">Submit</button>
+                    <button class="btn btn-danger" type="reset">Reset</button>
+                </div>
+            </form>
         </div>
-        <div class="card">
-            <img src="img/charmander.png" alt="Charmander">
-            <h3>Charmander</h3>
-            <p>Fire type Pokémon. Represents my burning passion for web development!</p>
-            <button>Choose Partner</button>
-        </div>
-        <div class="card">
-            <img src="img/bulbasaur.png" alt="Bulbasaur">
-            <h3>Bulbasaur</h3>
-            <p>Grass type Pokémon. Growing my skills like a sprouting seed!</p>
-            <button>Choose Partner</button>
-        </div>
-    </section>
-    <footer class="main-footer">© 2025 Denis Shin - Pokemon Web Developer Trainer</footer>
-</body>
 
-</html>
+        <!-- Bootstrap JavaScript Bundle -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+        <script>
+            // ==================== BOOTSTRAP VALIDATION SCRIPT ====================
+            // This handles the basic Bootstrap validation for all forms with .needs-validation class
+            (function () {
+                'use strict'
+
+                // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                var forms = document.querySelectorAll('.needs-validation')
+
+                // Loop over them and prevent submission if invalid
+                Array.prototype.slice.call(forms)
+                    .forEach(function (form) {
+                        form.addEventListener('submit', function (event) {
+                            if (!form.checkValidity()) {
+                                event.preventDefault()
+                                event.stopPropagation()
+                            }
+                            form.classList.add('was-validated')
+                        }, false)
+                    })
+            })()
+
+            // ==================== PASSWORD MATCHING VALIDATION ====================
+            // This is CRITICAL for Task 4 - ensures passwords match before submission
+
+            // Get the password fields from the registration form
+            const password = document.getElementById('regPassword');
+            const confirmPassword = document.getElementById('regConfirmPassword');
+            const confirmPasswordFeedback = document.getElementById('confirmPasswordFeedback');
+
+            // Function to check if passwords match
+            function validatePasswordMatch() {
+                if (password.value && confirmPassword.value) {
+                    // Both fields have values, now check if they match
+                    if (password.value !== confirmPassword.value) {
+                        // Passwords don't match - set custom validation message
+                        confirmPassword.setCustomValidity("Passwords don't match!");
+                        confirmPasswordFeedback.textContent = "Passwords don't match!";
+                    } else {
+                        // Passwords match - clear any custom validation error
+                        confirmPassword.setCustomValidity('');
+                        confirmPasswordFeedback.textContent = "Please confirm your password (must be 8+ chars).";
+                    }
+                } else {
+                    // If either field is empty, just check standard validation
+                    if (confirmPassword.value.length > 0 && confirmPassword.value.length < 8) {
+                        confirmPassword.setCustomValidity("Password must be at least 8 characters");
+                    } else if (confirmPassword.value.length >= 8) {
+                        // Length is OK, but need to check match
+                        if (password.value !== confirmPassword.value) {
+                            confirmPassword.setCustomValidity("Passwords don't match!");
+                            confirmPasswordFeedback.textContent = "Passwords don't match!";
+                        } else {
+                            confirmPassword.setCustomValidity('');
+                        }
+                    }
+                }
+            }
+
+            // Add event listeners to check password match in real-time
+            password.addEventListener('input', validatePasswordMatch);
+            confirmPassword.addEventListener('input', validatePasswordMatch);
+
+            // Additional validation on the registration form
+            const registrationForm = document.getElementById('registrationForm');
+            registrationForm.addEventListener('submit', function (event) {
+                // Make sure password validation runs one more time before submission
+                validatePasswordMatch();
+
+                // If form is valid, show success message (in a real app, you'd submit to server)
+                if (this.checkValidity()) {
+                    event.preventDefault(); // Remove this in production to allow actual submission
+                    alert('Registration successful! Form is valid and passwords match.');
+                    // Optionally reset the form
+                    // this.reset();
+                    // this.classList.remove('was-validated');
+                }
+            });
+
+            // Reset validation when form is reset
+            registrationForm.addEventListener('reset', function () {
+                this.classList.remove('was-validated');
+                confirmPassword.setCustomValidity('');
+                confirmPasswordFeedback.textContent = "Please confirm your password (must be 8+ chars).";
+            });
+        </script>
+    </body>
+
+    </html>
