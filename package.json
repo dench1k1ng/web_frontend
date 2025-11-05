@@ -1,0 +1,37 @@
+{
+    "name": "jquery-assignment-7",
+    "version": "1.0.0",
+    "description": "jQuery Assignment #7 - Selectors, Effects, and Animations",
+    "main": "index.html",
+    "scripts": {
+        "start": "npx http-server . -p 3000 -o",
+        "dev": "npx live-server --port=3000",
+        "test": "echo \"No tests specified\" && exit 0"
+    },
+    "keywords": [
+        "jquery",
+        "javascript",
+        "web-development",
+        "frontend",
+        "assignment",
+        "selectors",
+        "effects",
+        "animations",
+        "dom-manipulation"
+    ],
+    "author": "[Your Name] - [Your Group]",
+    "license": "MIT",
+    "dependencies": {},
+    "devDependencies": {
+        "http-server": "^14.1.1",
+        "live-server": "^1.2.2"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/dench1k1ng/web_frontend.git"
+    },
+    "browserslist": [
+        "> 1%",
+        "last 2 versions"
+    ]
+}

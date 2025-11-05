@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Assignment #7</title>
+    <!-- Include jQuery from CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>jQuery Assignment #7</h1>
+            <p>Student: Denis Shin | Group: SE-2434 </p>
+        </header>
+
+        <nav>
+            <h2>Tasks List</h2>
+            <ul>
+                <li><a href="#task0">Task 0: Setup</a></li>
+                <li><a href="#task1">Task 1: Selectors & CSS</a></li>
+                <li><a href="#task2">Task 2: Visibility Methods</a></li>
+                <li><a href="#task3">Task 3: Fade Methods</a></li>
+                <li><a href="#task4">Task 4: Slide Methods</a></li>
+                <li><a href="#task5">Task 5: Add & Remove Elements</a></li>
+                <li><a href="#task6">Task 6: Modifying Attributes</a></li>
+                <li><a href="#task7">Task 7: Form Interaction</a></li>
+                <li><a href="#task8">Task 8: Basic Animation</a></li>
+                <li><a href="#task9">Task 9: Sequential Animations</a></li>
+                <li><a href="#task10">Task 10: Combined Animation</a></li>
+                <li><a href="#task11">Task 11: Mini Project</a></li>
+            </ul>
+        </nav>
+
+        <!-- Task 0: Setup -->
+        <section id="task0" class="task-section">
+            <h2>Task 0: Setup</h2>
+            <p>jQuery is loaded and ready! Check the console for confirmation.</p>
+            <div class="result-box">
+                <p>Console output: "jQuery is ready!"</p>
+            </div>
+        </section>
+
+        <!-- Task 1: Selectors & CSS -->
+        <section id="task1" class="task-section">
+            <h2>Task 1: Selectors & CSS</h2>
+            <div class="demo-area">
+                <p id="demo-id">Element selected by ID</p>
+                <p class="demo-class">Element selected by class</p>
+                <h3>Element selected by tag</h3>
+                <button id="change-content">Change Content</button>
+                <button id="change-styles">Change Styles</button>
+            </div>
+        </section>
+
+        <!-- Task 2: Visibility Methods -->
+        <section id="task2" class="task-section">
+            <h2>Task 2: Visibility Methods</h2>
+            <div class="demo-area">
+                <p id="visibility-demo">This paragraph can be hidden and shown!</p>
+                <button id="hide-btn">Hide</button>
+                <button id="show-btn">Show</button>
+                <button id="toggle-btn">Toggle</button>
+            </div>
+        </section>
+
+        <!-- Task 3: Fade Methods -->
+        <section id="task3" class="task-section">
+            <h2>Task 3: Fade Methods</h2>
+            <div class="demo-area">
+                <img id="fade-image" src="https://via.placeholder.com/200x150/4CAF50/white?text=jQuery+Image"
+                    alt="Demo Image">
+                <div class="button-group">
+                    <button id="fade-in-btn">Fade In</button>
+                    <button id="fade-out-btn">Fade Out</button>
+                    <button id="fade-toggle-btn">Fade Toggle</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Task 4: Slide Methods -->
+        <section id="task4" class="task-section">
+            <h2>Task 4: Slide Methods</h2>
+            <div class="demo-area">
+                <button id="slide-toggle-btn">Toggle Panel</button>
+                <div id="slide-panel" class="panel">
+                    <h4>Panel Content</h4>
+                    <p>This panel slides up and down.</p>
+                </div>
+                <div class="button-group">
+                    <button id="slide-up-btn">Slide Up</button>
+                    <button id="slide-down-btn">Slide Down</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Task 5: Add & Remove Elements -->
+        <section id="task5" class="task-section">
+            <h2>Task 5: Add & Remove Elements</h2>
+            <div class="demo-area">
+                <ul id="dynamic-list">
+                    <li>Initial Item 1</li>
+                    <li>Initial Item 2</li>
+                </ul>
+                <div class="button-group">
+                    <button id="add-item-btn">Add Item</button>
+                    <button id="remove-item-btn">Remove Last Item</button>
+                    <button id="prepend-item-btn">Add Item to Top</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Task 6: Modifying Attributes -->
+        <section id="task6" class="task-section">
+            <h2>Task 6: Modifying Attributes</h2>
+            <div class="demo-area">
+                <img id="dynamic-image" src="https://via.placeholder.com/150x100/FF5722/blue?text=Image+1"
+                    alt="Dynamic Image">
+                <a id="dynamic-link" href="https://jquery.com" target="_blank">jQuery Official Site</a>
+                <div class="button-group">
+                    <button id="change-image-btn">Change Image</button>
+                    <button id="change-link-btn">Change Link</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Task 7: Form Interaction -->
+        <section id="task7" class="task-section">
+            <h2>Task 7: Form Interaction</h2>
+            <div class="demo-area">
+                <form id="live-form">
+                    <div class="form-group">
+                        <label for="name-input">Name:</label>
+                        <input type="text" id="name-input" placeholder="Enter your name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email-input">Email:</label>
+                        <input type="email" id="email-input" placeholder="Enter your email">
+                    </div>
+                </form>
+                <div id="live-output">
+                    <h4>Live Output:</h4>
+                    <p>Name: <span id="name-display">Type in the name field</span></p>
+                    <p>Email: <span id="email-display">Type in the email field</span></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Task 8: Basic Animation -->
+        <section id="task8" class="task-section">
+            <h2>Task 8: Basic Animation</h2>
+            <div class="demo-area">
+                <div id="animate-box" class="animation-box">Animate Me!</div>
+                <button id="animate-basic-btn">Start Basic Animation</button>
+                <button id="reset-box-btn">Reset Box</button>
+            </div>
+        </section>
+
+        <!-- Task 9: Sequential Animations -->
+        <section id="task9" class="task-section">
+            <h2>Task 9: Sequential Animations</h2>
+            <div class="demo-area">
+                <div id="sequence-box" class="animation-box">Sequential Animation</div>
+                <button id="animate-sequence-btn">Start Sequence</button>
+                <button id="reset-sequence-btn">Reset</button>
+            </div>
+        </section>
+
+        <!-- Task 10: Combined Animation -->
+        <section id="task10" class="task-section">
+            <h2>Task 10: Combined Animation</h2>
+            <div class="demo-area">
+                <div id="combined-box" class="animation-box">Combined Animation</div>
+                <button id="animate-combined-btn">Start Combined Animation</button>
+                <button id="reset-combined-btn">Reset</button>
+            </div>
+        </section>
+
+        <!-- Task 11: Mini Project - Image Gallery -->
+        <section id="task11" class="task-section">
+            <h2>Task 11: Mini Project - Image Gallery</h2>
+            <div class="demo-area">
+                <div class="gallery-container">
+                    <div class="thumbnails">
+                        <img class="thumbnail" src="img/1345576.jpeg" data-large="img/1345576.jpeg" alt="Anime Scene">
+                        <img class="thumbnail" src="img/clifford-VobvKmG-StA-unsplash.jpg"
+                            data-large="img/clifford-VobvKmG-StA-unsplash.jpg" alt="Cafe View">
+                        <img class="thumbnail" src="img/japan-background-digital-art.jpg"
+                            data-large="img/japan-background-digital-art.jpg" alt="japan View">
+                    </div>
+                    <div class="large-image-container">
+                        <img id="large-image"
+                            src="https://via.placeholder.com/300x200/FF6B6B/white?text=Beautiful+Nature+Scene"
+                            alt="Large View">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

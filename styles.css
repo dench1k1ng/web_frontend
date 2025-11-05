@@ -1,0 +1,315 @@
+/* Simple Student Assignment Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: white;
+    padding: 20px;
+    border: 1px solid #ddd;
+}
+
+/* Header */
+header {
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #e0e0e0;
+    border: 1px solid #ccc;
+}
+
+header h1 {
+    font-size: 24px;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+/* Navigation */
+nav {
+    background: #f0f0f0;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+}
+
+nav h2 {
+    color: #333;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav li {
+    margin: 5px 0;
+}
+
+nav li a {
+    color: #0066cc;
+    text-decoration: none;
+    padding: 5px;
+}
+
+nav li a:hover {
+    text-decoration: underline;
+}
+
+/* Task Sections */
+.task-section {
+    margin-bottom: 30px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    background: #fafafa;
+}
+
+.task-section h2 {
+    color: #333;
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+/* Demo Areas */
+.demo-area {
+    background: white;
+    padding: 15px;
+    border: 1px solid #ccc;
+    margin-top: 10px;
+}
+
+.result-box {
+    background: #e8f5e8;
+    border: 1px solid #90EE90;
+    color: #006400;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+/* Buttons */
+button {
+    background: #4CAF50;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+    margin: 3px;
+    font-size: 14px;
+}
+
+button:hover {
+    background: #45a049;
+}
+
+.button-group {
+    margin-top: 10px;
+}
+
+/* Task-specific simple styles */
+
+/* Task 1 */
+#demo-id {
+    color: red;
+    font-weight: bold;
+}
+
+.demo-class {
+    background: yellow;
+    padding: 5px;
+}
+
+/* Task 2 */
+#visibility-demo {
+    background: lightgray;
+    padding: 15px;
+    text-align: center;
+}
+
+/* Task 3 */
+#fade-image {
+    display: block;
+    margin: 10px auto;
+    border: 1px solid #ccc;
+}
+
+/* Task 4 */
+.panel {
+    background: white;
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin-top: 10px;
+}
+
+.panel h4 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Task 5 */
+#dynamic-list {
+    background: white;
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin-bottom: 10px;
+    min-height: 80px;
+}
+
+#dynamic-list li {
+    background: #f0f0f0;
+    margin: 3px 0;
+    padding: 5px;
+    list-style-position: inside;
+}
+
+/* Task 6 */
+#dynamic-image {
+    display: block;
+    margin: 10px auto;
+    border: 1px solid #ccc;
+}
+
+#dynamic-link {
+    display: block;
+    text-align: center;
+    margin: 10px 0;
+    color: blue;
+    text-decoration: underline;
+}
+
+/* Task 7 */
+#live-form {
+    background: white;
+    padding: 15px;
+    border: 1px solid #ccc;
+    margin-bottom: 15px;
+}
+
+.form-group {
+    margin-bottom: 10px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 3px;
+    font-weight: bold;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+#live-output {
+    background: #e0f0ff;
+    border: 1px solid #b0d0ff;
+    padding: 15px;
+}
+
+#live-output h4 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Animation boxes */
+.animation-box {
+    width: 100px;
+    height: 100px;
+    background: lightblue;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #333;
+    margin: 15px 0;
+    cursor: pointer;
+    font-weight: bold;
+    text-align: center;
+    position: relative;
+}
+
+/* Task 11 - Image Gallery */
+.gallery-container {
+    background: white;
+    padding: 15px;
+    border: 1px solid #ccc;
+}
+
+.thumbnails {
+    margin-bottom: 15px;
+}
+
+.thumbnail {
+    width: 80px;
+    height: 60px;
+    margin: 5px;
+    border: 2px solid #ccc;
+    cursor: pointer;
+}
+
+.thumbnail:hover {
+    border-color: blue;
+}
+
+.thumbnail.active {
+    border-color: red;
+}
+
+.large-image-container {
+    text-align: center;
+}
+
+#large-image {
+    max-width: 100%;
+    height: 250px;
+    border: 1px solid #ccc;
+}
+
+/* No fancy animations - simple styles only */
+/* Animation keyframes */
+@keyframes bounce {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-30px);
+    }
+
+    60% {
+        transform: translateY(-15px);
+    }
+}
+
+.bounce {
+    animation: bounce 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.pulse {
+    animation: pulse 2s infinite;
+}
