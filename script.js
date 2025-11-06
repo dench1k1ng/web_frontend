@@ -165,16 +165,29 @@ $(document).ready(function () {
     // Task 9: Sequential Animations
     $('#animate-sequence-btn').click(function () {
         $('#sequence-box')
+            .css('backgroundColor', '#ff6b6b')
             .animate({ left: '200px' })
+            .queue(function (next) {
+                $(this).css('backgroundColor', '#4ecdc4');
+                next();
+            })
             .animate({ top: '100px' })
+            .queue(function (next) {
+                $(this).css('backgroundColor', '#45b7d1');
+                next();
+            })
             .animate({ width: '50px', height: '50px' })
+            .queue(function (next) {
+                $(this).css('backgroundColor', '#96ceb4');
+                next();
+            })
             .animate({ left: '0px', top: '0px', width: '100px', height: '100px' });
     });
 
     // Task 10: Combined Animation
     $('#animate-combined-btn').click(function () {
         $('#combined-box').animate({
-            opacity: 0.5,
+            opacity: 0.1,
             width: '200px',
             height: '150px',
             left: '100px'

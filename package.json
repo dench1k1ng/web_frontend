@@ -19,7 +19,7 @@
         "animations",
         "dom-manipulation"
     ],
-    "author": "[Your Name] - [Your Group]",
+    "author": "Denis Shin - SE-2434",
     "license": "MIT",
     "dependencies": {},
     "devDependencies": {
