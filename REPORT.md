@@ -326,6 +326,266 @@ $('#animate-combined-btn').click(function() {
 
 ---
 
+
+    $('#animate-sequence-btn').click(function () {
+        $('#sequence-box')
+            .css('backgroundColor', '#ff6b6b')
+            .animate({ left: '200px' })
+            .queue(function(next) {
+                $(this).css('backgroundColor', '#4ecdc4');
+                next();
+            })
+            .animate({ top: '100px' })
+            .queue(function(next) {
+                $(this).css('backgroundColor', '#45b7d1');
+                next();
+            })
+            .animate({ width: '50px', height: '50px' })
+            .queue(function(next) {
+                $(this).css('backgroundColor', '#96ceb4');
+                next();
+            })
+            .animate({ left: '0px', top: '0px', width: '100px', height: '100px' });
+    });
+
+
+
+
+
+
+    // Bonus: Background Color Changer
+    const backgroundColors = [
+        { color: '#ff6b6b', name: 'Coral Red' },
+        { color: '#4ecdc4', name: 'Turquoise' },
+        { color: '#45b7d1', name: 'Sky Blue' },
+        { color: '#96ceb4', name: 'Mint Green' },
+        { color: '#feca57', name: 'Golden Yellow' },
+        { color: '#ff9ff3', name: 'Pink' },
+        { color: '#54a0ff', name: 'Blue' },
+        { color: '#5f27cd', name: 'Purple' }
+    ];
+
+    let currentColorIndex = 0;
+
+    $('#change-bg-btn').click(function () {
+        const selectedColor = backgroundColors[currentColorIndex];
+        $('body').css('background-color', selectedColor.color);
+        $('#current-bg').text(selectedColor.name);
+
+        currentColorIndex = (currentColorIndex + 1) % backgroundColors.length;
+    });
+
+    $('#reset-bg-btn').click(function () {
+        $('body').css('background-color', '#f5f5f5');
+        $('#current-bg').text('Default');
+        currentColorIndex = 0;
+    });
+
+
+
+            <section id="background-changer" class="task-section">
+            <h2>Bonus: Background Color Changer</h2>
+            <div class="demo-area">
+                <p>Click the button to change the page background color:</p>
+                <div class="button-group">
+                    <button id="change-bg-btn">Change Background Color</button>
+                    <button id="reset-bg-btn">Reset Background</button>
+                </div>
+                <div class="result-box">
+                    <p>Current background: <span id="current-bg">Default</span></p>
+                </div>
+            </div>
+        </section>
+
+
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+}
+
+body.dark-mode .container {
+    background: #2d2d2d;
+    border: 1px solid #444;
+}
+
+body.dark-mode header {
+    background-color: #333;
+    border: 1px solid #555;
+    color: #e0e0e0;
+}
+
+body.dark-mode nav {
+    background: #333;
+    border: 1px solid #555;
+}
+
+body.dark-mode nav h2 {
+    color: #e0e0e0;
+}
+
+body.dark-mode nav li a {
+    color: #66aaff;
+}
+
+body.dark-mode .task-section {
+    background: #333;
+    border: 1px solid #555;
+}
+
+body.dark-mode .task-section h2 {
+    color: #e0e0e0;
+}
+
+body.dark-mode .demo-area {
+    background: #2a2a2a;
+    border: 1px solid #555;
+}
+
+body.dark-mode .result-box {
+    background: #1e3a1e;
+    border: 1px solid #4a7c59;
+    color: #90ee90;
+}
+
+body.dark-mode button {
+    background: #0066cc;
+    color: white;
+}
+
+body.dark-mode button:hover {
+    background: #0052a3;
+}
+
+body.dark-mode .form-group input {
+    background: #444;
+    border: 1px solid #666;
+    color: #e0e0e0;
+}
+
+body.dark-mode .gallery-container {
+    background: #2a2a2a;
+    border: 1px solid #555;
+}
+
+
+
+
+    // Bonus: Interactive Color Controls
+    const backgroundColors = [
+        { color: '#ff6b6b', name: 'Coral Red' },
+        { color: '#4ecdc4', name: 'Turquoise' },
+        { color: '#45b7d1', name: 'Sky Blue' },
+        { color: '#96ceb4', name: 'Mint Green' },
+        { color: '#feca57', name: 'Golden Yellow' },
+        { color: '#ff9ff3', name: 'Pink' },
+        { color: '#54a0ff', name: 'Blue' },
+        { color: '#5f27cd', name: 'Purple' }
+    ];
+
+    let currentColorIndex = 0;
+    let isDarkMode = false;
+
+    // Preset color cycling
+    $('#change-bg-btn').click(function () {
+        const selectedColor = backgroundColors[currentColorIndex];
+        $('body').css('background-color', selectedColor.color);
+        $('#current-bg').text(selectedColor.name);
+
+        currentColorIndex = (currentColorIndex + 1) % backgroundColors.length;
+    });
+
+    $('#reset-bg-btn').click(function () {
+        if (isDarkMode) {
+            $('body').css('background-color', '#1a1a1a');
+            $('#current-bg').text('Dark Default');
+        } else {
+            $('body').css('background-color', '#f5f5f5');
+            $('#current-bg').text('Light Default');
+        }
+        currentColorIndex = 0;
+    });
+
+    // Custom color input functionality
+    $('#apply-color-btn').click(function () {
+        const userColor = $('#color-input').val().trim();
+        if (userColor) {
+            try {
+                $('body').css('background-color', userColor);
+                $('#current-bg').text(userColor);
+                $('#color-input').val(''); // Clear input
+            } catch (error) {
+                alert('Invalid color! Please try again with a valid color name or hex code.');
+            }
+        } else {
+            alert('Please enter a color first!');
+        }
+    });
+
+    // Apply color to text instead of background
+    $('#apply-to-text-btn').click(function () {
+        const userColor = $('#color-input').val().trim();
+        if (userColor) {
+            try {
+                $('.task-section h2').css('color', userColor);
+                $('#current-bg').text('Text colored: ' + userColor);
+                $('#color-input').val(''); // Clear input
+            } catch (error) {
+                alert('Invalid color! Please try again with a valid color name or hex code.');
+            }
+        } else {
+            alert('Please enter a color first!');
+        }
+    });
+
+    // Enter key support for color input
+    $('#color-input').keypress(function (e) {
+        if (e.which === 13) { // Enter key
+            $('#apply-color-btn').click();
+        }
+    });
+
+    
+
+
+
+
+
+        <!-- Bonus: Interactive Color Controls -->
+        <section id="background-changer" class="task-section">
+            <h2>Bonus: Interactive Color Controls</h2>
+            <div class="demo-area">
+                <h4>1. Preset Colors</h4>
+                <p>Click the button to cycle through preset colors:</p>
+                <div class="button-group">
+                    <button id="change-bg-btn">Change Background Color</button>
+                    <button id="reset-bg-btn">Reset Background</button>
+                </div>
+
+                <h4>2. Custom Color Input</h4>
+                <p>Type a color name or hex code (e.g., "red", "blue", "#ff0000"):</p>
+                <div class="form-group">
+                    <input type="text" id="color-input" placeholder="Enter color (red, blue, #ff0000)" />
+                    <button id="apply-color-btn">Apply Color</button>
+                    <button id="apply-to-text-btn">Apply to Text</button>
+                </div>
+
+                <h4>3. Dark Mode Toggle</h4>
+                <div class="button-group">
+                    <button id="dark-mode-btn">🌙 Enable Dark Mode</button>
+                </div>
+
+                <div class="result-box">
+                    <p>Current background: <span id="current-bg">Default</span></p>
+                    <p>Mode: <span id="current-mode">Light Mode</span></p>
+                </div>
+            </div>
+        </section>
+
+
+
+
 ## Part 5: Mini Project
 
 ### Task 11: Interactive Image Gallery

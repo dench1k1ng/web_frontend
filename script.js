@@ -5,6 +5,7 @@ $(document).ready(function () {
     // Task 1: Selectors & CSS
     let contentChanged = false;
     let stylesChanged = false;
+    let isDarkMode = false;
 
     $('#change-content').click(function () {
         if (!contentChanged) {
@@ -46,6 +47,23 @@ $(document).ready(function () {
             $(this).text('Change Styles');
             stylesChanged = false;
         }
+    });
+
+    $('#dark-mode-btn').click(function () {
+        isDarkMode = !isDarkMode;
+
+        if (isDarkMode) {
+            $('body').addClass('dark-mode');
+            $(this).text('Enable Light Mode');
+            $('#current-mode').text('Dark Mode');
+        } else {
+            $('body').removeClass('dark-mode');
+            $(this).text('Enable Light Mode');
+            $('#current-mode').text('Light Mode');
+        }
+
+        // Reset background to appropriate default
+        $('#reset-bg-btn').click();
     });
 
     // Task 2: Visibility Methods
@@ -165,22 +183,9 @@ $(document).ready(function () {
     // Task 9: Sequential Animations
     $('#animate-sequence-btn').click(function () {
         $('#sequence-box')
-            .css('backgroundColor', '#ff6b6b')
             .animate({ left: '200px' })
-            .queue(function (next) {
-                $(this).css('backgroundColor', '#4ecdc4');
-                next();
-            })
             .animate({ top: '100px' })
-            .queue(function (next) {
-                $(this).css('backgroundColor', '#45b7d1');
-                next();
-            })
             .animate({ width: '50px', height: '50px' })
-            .queue(function (next) {
-                $(this).css('backgroundColor', '#96ceb4');
-                next();
-            })
             .animate({ left: '0px', top: '0px', width: '100px', height: '100px' });
     });
 

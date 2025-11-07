@@ -313,3 +313,73 @@ button:hover {
 .pulse {
     animation: pulse 2s infinite;
 }
+
+
+body.dark-mode {
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+}
+
+body.dark-mode .container {
+    background: #2d2d2d;
+    border: 1px solid #444;
+}
+
+body.dark-mode header {
+    background-color: #333;
+    border: 1px solid #555;
+    color: #e0e0e0;
+}
+
+body.dark-mode nav {
+    background: #333;
+    border: 1px solid #555;
+}
+
+body.dark-mode nav h2 {
+    color: #e0e0e0;
+}
+
+body.dark-mode nav li a {
+    color: #66aaff;
+}
+
+body.dark-mode .task-section {
+    background: #333;
+    border: 1px solid #555;
+}
+
+body.dark-mode .task-section h2 {
+    color: #e0e0e0;
+}
+
+body.dark-mode .demo-area {
+    background: #2a2a2a;
+    border: 1px solid #555;
+}
+
+body.dark-mode .result-box {
+    background: #1e3a1e;
+    border: 1px solid #4a7c59;
+    color: #90ee90;
+}
+
+body.dark-mode button {
+    background: #0066cc;
+    color: white;
+}
+
+body.dark-mode button:hover {
+    background: #0052a3;
+}
+
+body.dark-mode .form-group input {
+    background: #444;
+    border: 1px solid #666;
+    color: #e0e0e0;
+}
+
+body.dark-mode .gallery-container {
+    background: #2a2a2a;
+    border: 1px solid #555;
+}
