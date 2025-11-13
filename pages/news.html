@@ -1,0 +1,30 @@
+<!-- News Page Content -->
+<div id="news" class="page-container">
+    <section class="container">
+        <h2 class="section-title">HR Industry News</h2>
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <div class="news-filters mb-4">
+                    <h5>Filter by category:</h5>
+                    <button class="btn btn-outline-primary me-2 filter-btn active" data-category="all">All</button>
+                    <button class="btn btn-outline-primary me-2 filter-btn" data-category="business">Business</button>
+                    <button class="btn btn-outline-primary me-2 filter-btn"
+                        data-category="technology">Technology</button>
+                    <button class="btn btn-outline-primary me-2 filter-btn" data-category="health">Health</button>
+                </div>
+
+                <div id="newsContainer">
+                    <div class="d-flex justify-content-center">
+                        <div class="spinner-border" role="status">
+                            <span class="visually-hidden">Loading news...</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center mt-4">
+                    <button id="loadMoreNews" class="btn btn-primary" style="display: none;">Load More News</button>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

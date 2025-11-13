@@ -2,97 +2,696 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>FoodSave — Task 1 Layout</title>
-    <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HRMS - Human Resource Management System</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <div id="header">
-        <div class="logo-container">
-            <div class="foodsave-logo">
-                <div class="logo-icon"></div>
-                <span class="logo-text">FoodSave</span>
-            </div>
-        </div>
-        <h1>Assignment 2: CSS Styling - Denis Shin</h1>
-        <p>Layout built using <strong>&lt;div&gt;</strong> + <strong>floats</strong> (no Flexbox/Grid)</p>
-    </div>
-
-    <div id="nav">
-        <a href="index.html">Task 1: Layout</a>
-        <a href="exercise1/index.html">Task 2: Tribute</a>
-        <a href="table_styling/index.html">Task 3: Table & Form</a>
-        <a href="task4_wireframe/index.html">Task 4: Wireframes</a>
-    </div>
-
-    <div id="middle" class="clearfix">
-        <div id="sidebar">
-            <h2>Assignment Navigation</h2>
-            <div class="menu-item"><a href="#about">About Assignment</a></div>
-            <div class="menu-item"><a href="#tasks">All Tasks</a></div>
-            <div class="menu-item"><a href="#layout-demo">Layout Demo</a></div>
-            <div class="menu-item"><a href="#contact">Contact Info</a></div>
-            <p class="hint">This column is floated left.</p>
-        </div>
-
-        <div id="content">
-            <div id="about">
-                <h2>About Assignment 2</h2>
-                <p>
-                    This assignment demonstrates CSS styling skills including layout design using div elements and
-                    floats.
-                    The project consists of 4 main tasks: simple layout, tribute page, tables & forms, and wireframe
-                    design.
-                    Each task showcases different CSS techniques and web development concepts.
-                </p>
-            </div>
-
-            <div id="tasks">
-                <h2>Assignment Tasks Overview</h2>
-                <p>
-                    Navigate through all tasks using the top navigation bar. Each task demonstrates specific CSS and
-                    HTML skills:
-                </p>
-                <ul>
-                    <li><strong>Task 1:</strong> Simple webpage layout using div + positioning/floats</li>
-                    <li><strong>Task 2:</strong> Tribute page with structured content and styling</li>
-                    <li><strong>Task 3:</strong> Professional tables and forms with advanced CSS</li>
-                    <li><strong>Task 4:</strong> Complete wireframe design for HR Management System</li>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#" onclick="showPage('home')">
+                <i class="fas fa-users me-2"></i>HRMS
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#" onclick="showPage('home')">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="showPage('services')">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="showPage('calculator')">Salary Calculator</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="showPage('team')">Our Team</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="showPage('careers')">Careers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="showPage('news')">News</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="showPage('dashboard')">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="showPage('contact')">Contact</a>
+                    </li>
                 </ul>
+                <button class="theme-toggle" id="themeToggle" onclick="Theme.toggle()">
+                    <i class="fas fa-moon"></i>
+                </button>
             </div>
+        </div>
+    </nav>
 
-            <div id="layout-demo">
-                <h2>Layout Demonstration</h2>
-                <p>
-                    This page demonstrates the required layout structure for Task 1:
-                </p>
-                <div class="card">
-                    <h3>Layout Components</h3>
-                    <ol>
-                        <li><strong>Header:</strong> Title and description at the top</li>
-                        <li><strong>Navigation Bar:</strong> Links to all assignment tasks</li>
-                        <li><strong>Two-column layout:</strong> Sidebar (left) and content (right)</li>
-                        <li><strong>Footer:</strong> Copyright information at the bottom</li>
-                    </ol>
+    <!-- Home Page -->
+    <div id="home" class="page-container active">
+        <div class="hero">
+            <div class="container">
+                <h1>Human Resource Management System</h1>
+                <p>Streamline your HR processes with our comprehensive management solution</p>
+                <button class="btn-custom" onclick="showPage('services')">Explore Services</button>
+            </div>
+        </div>
+
+        <section class="container">
+            <h2 class="section-title">Why Choose Our HRMS?</h2>
+            <div class="features-grid">
+                <div class="feature-box">
+                    <div class="feature-number">500+</div>
+                    <h4>Companies Trust Us</h4>
+                    <p>Leading organizations rely on our platform</p>
+                </div>
+                <div class="feature-box">
+                    <div class="feature-number">98%</div>
+                    <h4>Satisfaction Rate</h4>
+                    <p>Highly rated by HR professionals</p>
+                </div>
+                <div class="feature-box">
+                    <div class="feature-number">24/7</div>
+                    <h4>Support Available</h4>
+                    <p>Round-the-clock assistance for your needs</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card-custom">
+                        <div class="card-body">
+                            <div class="card-icon">&#128188;</div>
+                            <h4>Efficient Management</h4>
+                            <p>Manage all HR operations from a single, intuitive platform</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card-custom">
+                        <div class="card-body">
+                            <div class="card-icon">&#128273;</div>
+                            <h4>Secure & Compliant</h4>
+                            <p>Enterprise-level security with full regulatory compliance</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card-custom">
+                        <div class="card-body">
+                            <div class="card-icon">&#128202;</div>
+                            <h4>Data Analytics</h4>
+                            <p>Make informed decisions with powerful analytics tools</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Weather Widget -->
+        <section class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <div class="weather-widget">
+                        <h4 class="text-center mb-3">
+                            <i class="fas fa-cloud-sun me-2"></i>Office Weather
+                        </h4>
+                        <div id="weatherDisplay" class="text-center">
+                            <div class="spinner-border" role="status">
+                                <span class="visually-hidden">Loading weather...</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Services Page -->
+    <div id="services" class="page-container">
+        <section class="container">
+            <h2 class="section-title">Our Services</h2>
+            <div class="row">
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card-custom">
+                        <div class="card-body">
+                            <div class="card-icon">&#128101;</div>
+                            <h4>Recruitment Management</h4>
+                            <p>Streamline your hiring process with applicant tracking, interview scheduling, and
+                                candidate evaluation tools</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card-custom">
+                        <div class="card-body">
+                            <div class="card-icon">&#128176;</div>
+                            <h4>Payroll Processing</h4>
+                            <p>Automated payroll calculations, tax deductions, and direct deposit management for
+                                accurate payments</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card-custom">
+                        <div class="card-body">
+                            <div class="card-icon">&#128197;</div>
+                            <h4>Leave Management</h4>
+                            <p>Digital leave requests, approval workflows, and real-time balance tracking for employees
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card-custom">
+                        <div class="card-body">
+                            <div class="card-icon">&#127891;</div>
+                            <h4>Training & Development</h4>
+                            <p>Create training programs, track employee progress, and manage certifications effectively
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card-custom">
+                        <div class="card-body">
+                            <div class="card-icon">&#128200;</div>
+                            <h4>Performance Reviews</h4>
+                            <p>Set goals, conduct evaluations, and provide continuous feedback to improve performance
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card-custom">
+                        <div class="card-body">
+                            <div class="card-icon">&#128190;</div>
+                            <h4>Document Management</h4>
+                            <p>Secure storage and easy access to employee documents, contracts, and HR policies</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Salary Calculator Page -->
+    <div id="calculator" class="page-container">
+        <section class="container">
+            <h2 class="section-title">Employee Salary Calculator</h2>
+            <div class="calculator">
+                <div class="mb-3">
+                    <label class="form-label">Basic Salary</label>
+                    <input type="number" class="form-control" id="basicSalary" placeholder="Enter basic salary">
+                    <span class="error-text" id="basicSalaryError">Please enter a valid salary</span>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Allowances</label>
+                    <input type="number" class="form-control" id="allowances" placeholder="Enter allowances">
+                    <span class="error-text" id="allowancesError">Please enter a valid amount</span>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Bonuses</label>
+                    <input type="number" class="form-control" id="bonuses" placeholder="Enter bonuses">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Tax Rate (%)</label>
+                    <input type="number" class="form-control" id="taxRate" placeholder="Enter tax rate" value="15">
+                    <span class="error-text" id="taxRateError">Please enter a valid tax rate</span>
+                </div>
+                <button class="btn-submit" onclick="calculateSalary()">Calculate Net Salary</button>
+                <div class="calculator-result" id="calculatorResult"></div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Team Page -->
+    <div id="team" class="page-container">
+        <section class="container">
+            <h2 class="section-title">Meet Our Team</h2>
+            <div class="row">
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="employee-card"
+                        onclick="showEmployeeDetails('Sarah Johnson', 'HR Director', 'sarah.johnson@hrms.com', '10 years experience in HR management')">
+                        <div class="employee-avatar">SJ</div>
+                        <h4>Sarah Johnson</h4>
+                        <p class="text-muted">HR Director</p>
+                        <p>Leading our HR strategy and operations</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="employee-card"
+                        onclick="showEmployeeDetails('Michael Chen', 'Recruitment Manager', 'michael.chen@hrms.com', '7 years in talent acquisition')">
+                        <div class="employee-avatar">MC</div>
+                        <h4>Michael Chen</h4>
+                        <p class="text-muted">Recruitment Manager</p>
+                        <p>Expert in finding the right talent</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="employee-card"
+                        onclick="showEmployeeDetails('Emily Rodriguez', 'Training Coordinator', 'emily.rodriguez@hrms.com', '5 years in employee development')">
+                        <div class="employee-avatar">ER</div>
+                        <h4>Emily Rodriguez</h4>
+                        <p class="text-muted">Training Coordinator</p>
+                        <p>Developing employee skills and growth</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="employee-card"
+                        onclick="showEmployeeDetails('David Kim', 'Payroll Specialist', 'david.kim@hrms.com', '6 years in payroll management')">
+                        <div class="employee-avatar">DK</div>
+                        <h4>David Kim</h4>
+                        <p class="text-muted">Payroll Specialist</p>
+                        <p>Ensuring accurate and timely payroll</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="employee-card"
+                        onclick="showEmployeeDetails('Jessica Williams', 'Benefits Administrator', 'jessica.williams@hrms.com', '4 years in employee benefits')">
+                        <div class="employee-avatar">JW</div>
+                        <h4>Jessica Williams</h4>
+                        <p class="text-muted">Benefits Administrator</p>
+                        <p>Managing comprehensive benefits programs</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="employee-card"
+                        onclick="showEmployeeDetails('Robert Taylor', 'HR Analytics Manager', 'robert.taylor@hrms.com', '8 years in HR technology')">
+                        <div class="employee-avatar">RT</div>
+                        <h4>Robert Taylor</h4>
+                        <p class="text-muted">HR Analytics Manager</p>
+                        <p>Driving insights through data analysis</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Careers Page -->
+    <div id="careers" class="page-container">
+        <section class="container">
+            <h2 class="section-title">Join Our Team</h2>
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="job-card">
+                        <h4>Senior HR Consultant</h4>
+                        <p>Lead HR transformation projects for enterprise clients and develop strategic solutions</p>
+                        <div class="mb-3">
+                            <span class="job-badge badge-fulltime">Full-time</span>
+                            <span class="job-badge badge-remote">Remote</span>
+                        </div>
+                        <button class="btn btn-primary" onclick="showApplicationForm('Senior HR Consultant')">Apply
+                            Now</button>
+                    </div>
+                    <div class="job-card">
+                        <h4>Software Developer</h4>
+                        <p>Build and enhance our HRMS platform using modern technologies and best practices</p>
+                        <div class="mb-3">
+                            <span class="job-badge badge-fulltime">Full-time</span>
+                            <span class="job-badge badge-remote">Hybrid</span>
+                        </div>
+                        <button class="btn btn-primary" onclick="showApplicationForm('Software Developer')">Apply
+                            Now</button>
+                    </div>
+                    <div class="job-card">
+                        <h4>Customer Success Manager</h4>
+                        <p>Ensure client satisfaction and drive product adoption through excellent support</p>
+                        <div class="mb-3">
+                            <span class="job-badge badge-fulltime">Full-time</span>
+                            <span class="job-badge badge-remote">On-site</span>
+                        </div>
+                        <button class="btn btn-primary" onclick="showApplicationForm('Customer Success Manager')">Apply
+                            Now</button>
+                    </div>
+                    <div class="job-card">
+                        <h4>UX/UI Designer</h4>
+                        <p>Design intuitive interfaces that make HR processes simple and efficient</p>
+                        <div class="mb-3">
+                            <span class="job-badge badge-fulltime">Contract</span>
+                            <span class="job-badge badge-remote">Remote</span>
+                        </div>
+                        <button class="btn btn-primary" onclick="showApplicationForm('UX/UI Designer')">Apply
+                            Now</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- News Page -->
+    <div id="news" class="page-container">
+        <section class="container">
+            <h2 class="section-title">
+                <i class="fas fa-newspaper me-2"></i>HR Industry News
+            </h2>
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="news-filters mb-4">
+                        <h5>Filter by category:</h5>
+                        <button class="btn btn-outline-primary me-2 filter-btn active" data-category="all">All</button>
+                        <button class="btn btn-outline-primary me-2 filter-btn"
+                            data-category="business">Business</button>
+                        <button class="btn btn-outline-primary me-2 filter-btn"
+                            data-category="technology">Technology</button>
+                        <button class="btn btn-outline-primary me-2 filter-btn" data-category="health">Health</button>
+                    </div>
+
+                    <div id="newsContainer">
+                        <div class="d-flex justify-content-center">
+                            <div class="spinner-border" role="status">
+                                <span class="visually-hidden">Loading news...</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="text-center mt-4">
+                        <button id="loadMoreNews" class="btn btn-primary" style="display: none;">Load More News</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Dashboard Page -->
+    <div id="dashboard" class="page-container">
+        <section class="container">
+            <h2 class="section-title">
+                <i class="fas fa-tachometer-alt me-2"></i>User Dashboard
+            </h2>
+
+            <!-- User Profile Section -->
+            <div class="row mb-4">
+                <div class="col-lg-4">
+                    <div class="card-custom">
+                        <div class="card-body text-center">
+                            <div class="user-avatar mb-3">
+                                <i class="fas fa-user fa-3x"></i>
+                            </div>
+                            <h4 id="userDisplayName">Guest User</h4>
+                            <p id="userDisplayEmail">Not logged in</p>
+                            <div id="loginSection">
+                                <button class="btn btn-primary" data-bs-toggle="modal"
+                                    data-bs-target="#loginModal">Login</button>
+                                <button class="btn btn-outline-primary ms-2" data-bs-toggle="modal"
+                                    data-bs-target="#registerModal">Register</button>
+                            </div>
+                            <div id="userSection" style="display: none;">
+                                <button class="btn btn-outline-danger" onclick="logout()">Logout</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-8">
+                    <div class="card-custom">
+                        <div class="card-body">
+                            <h4>Quick Stats</h4>
+                            <div class="row">
+                                <div class="col-md-3 text-center">
+                                    <h5 class="text-primary">15</h5>
+                                    <p>Applications</p>
+                                </div>
+                                <div class="col-md-3 text-center">
+                                    <h5 class="text-success">8</h5>
+                                    <p>Interviews</p>
+                                </div>
+                                <div class="col-md-3 text-center">
+                                    <h5 class="text-warning">3</h5>
+                                    <p>Pending</p>
+                                </div>
+                                <div class="col-md-3 text-center">
+                                    <h5 class="text-info">2</h5>
+                                    <p>Offers</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <div id="contact">
-                <h2>Student Information</h2>
-                <p>
-                    <strong>Student:</strong> Denis Shin<br>
-                    <strong>Group:</strong> SE-2434<br>
-                    <strong>Course:</strong> Web Technologies 1<br>
-                    <strong>Assignment:</strong> CSS Styling (Colors, Fonts, Layout)
-                </p>
+            <!-- Favorites Section -->
+            <div class="row">
+                <div class="col-12">
+                    <div class="card-custom">
+                        <div class="card-body">
+                            <h4><i class="fas fa-heart me-2"></i>Your Favorite Jobs</h4>
+                            <div id="favoriteJobs">
+                                <p class="text-muted">No favorite jobs yet. Browse our careers page to save jobs!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Daily Quote Section -->
+            <div class="row mt-4">
+                <div class="col-12">
+                    <div class="card-custom quote-card">
+                        <div class="card-body text-center">
+                            <h4><i class="fas fa-quote-left me-2"></i>Daily Inspiration</h4>
+                            <div id="quoteContainer">
+                                <div class="spinner-border" role="status">
+                                    <span class="visually-hidden">Loading quote...</span>
+                                </div>
+                            </div>
+                            <button class="btn btn-outline-light mt-3" onclick="loadNewQuote()">
+                                <i class="fas fa-sync-alt me-2"></i>New Quote
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Contact Page -->
+    <div id="contact" class="page-container">
+        <section class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="row">
+                <div class="col-lg-6 mb-4">
+                    <div class="contact-info">
+                        <h4 class="mb-4">Contact Information</h4>
+                        <div class="contact-item">
+                            <div class="contact-icon">&#9993;</div>
+                            <div>
+                                <h5>Email</h5>
+                                <p>info@hrms.com<br>support@hrms.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">&#128222;</div>
+                            <div>
+                                <h5>Phone</h5>
+                                <p>+1 (555) 123-4567<br>+1 (555) 987-6543</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">&#128205;</div>
+                            <div>
+                                <h5>Office</h5>
+                                <p>AITU<br>Coworking, Atameken Space</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <div class="calculator">
+                        <h4 class="mb-4">Send Us a Message</h4>
+                        <div class="mb-3">
+                            <label class="form-label">Full Name</label>
+                            <input type="text" class="form-control" id="contactName" placeholder="Your name">
+                            <span class="error-text" id="nameError">Please enter your name</span>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Email Address</label>
+                            <input type="email" class="form-control" id="contactEmail" placeholder="your@email.com">
+                            <span class="error-text" id="emailError">Please enter a valid email</span>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Subject</label>
+                            <input type="text" class="form-control" id="contactSubject" placeholder="Subject">
+                            <span class="error-text" id="subjectError">Please enter a subject</span>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Message</label>
+                            <textarea class="form-control" id="contactMessage" rows="4"
+                                placeholder="Your message"></textarea>
+                            <span class="error-text" id="messageError">Please enter your message</span>
+                        </div>
+                        <button class="btn-submit" onclick="submitContact()">Send Message</button>
+                        <div class="success-message" id="contactSuccess">
+                            Thank you for contacting us! We'll get back to you soon.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h5>HRMS</h5>
+                    <p>Empowering organizations with comprehensive human resource management solutions.</p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" onclick="showPage('home')">Home</a></li>
+                        <li><a href="#" onclick="showPage('services')">Services</a></li>
+                        <li><a href="#" onclick="showPage('team')">Our Team</a></li>
+                        <li><a href="#" onclick="showPage('careers')">Careers</a></li>
+                        <li><a href="#" onclick="showPage('contact')">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5>Connect With Us</h5>
+                    <p>Follow us on social media for updates and news</p>
+                    <div>
+                        <a href="#" class="me-3">LinkedIn</a>
+                        <a href="#" class="me-3">Twitter</a>
+                        <a href="#">Facebook</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 HRMS. All rights reserved. | Privacy Policy | Terms of Service</p>
             </div>
         </div>
+    </footer>
 
-        <div id="footer">
-            © 2025 Shin Denis — All rights reserved.
+    <!-- Employee Details Modal -->
+    <div class="modal fade" id="employeeModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalEmployeeName"></h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p><strong>Position:</strong> <span id="modalEmployeePosition"></span></p>
+                    <p><strong>Email:</strong> <span id="modalEmployeeEmail"></span></p>
+                    <p><strong>Experience:</strong> <span id="modalEmployeeExperience"></span></p>
+                </div>
+            </div>
         </div>
+    </div>
+
+    <!-- Job Application Modal -->
+    <div class="modal fade" id="applicationModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Apply for <span id="jobTitle"></span></h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label class="form-label">Full Name</label>
+                        <input type="text" class="form-control" id="applicantName">
+                        <span class="error-text" id="applicantNameError">Please enter your name</span>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Email</label>
+                        <input type="email" class="form-control" id="applicantEmail">
+                        <span class="error-text" id="applicantEmailError">Please enter a valid email</span>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Phone</label>
+                        <input type="tel" class="form-control" id="applicantPhone">
+                        <span class="error-text" id="applicantPhoneError">Please enter your phone number</span>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Years of Experience</label>
+                        <input type="number" class="form-control" id="applicantExperience">
+                        <span class="error-text" id="applicantExperienceError">Please enter your experience</span>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Cover Letter</label>
+                        <textarea class="form-control" id="applicantCoverLetter" rows="4"></textarea>
+                        <span class="error-text" id="applicantCoverLetterError">Please write a cover letter</span>
+                    </div>
+                    <button class="btn-submit" onclick="submitApplication()">Submit Application</button>
+                    <div class="success-message" id="applicationSuccess">
+                        Application submitted successfully! We'll review it and get back to you soon.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Login Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title"><i class="fas fa-sign-in-alt me-2"></i>Login</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label class="form-label">Email</label>
+                        <input type="email" class="form-control" id="loginEmail">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Password</label>
+                        <input type="password" class="form-control" id="loginPassword">
+                    </div>
+                    <div class="error-text" id="loginError"></div>
+                    <button class="btn-submit" onclick="handleLogin()">Login</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Register Modal -->
+    <div class="modal fade" id="registerModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title"><i class="fas fa-user-plus me-2"></i>Register</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label class="form-label">Full Name</label>
+                        <input type="text" class="form-control" id="registerName">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Email</label>
+                        <input type="email" class="form-control" id="registerEmail">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Password</label>
+                        <input type="password" class="form-control" id="registerPassword">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Confirm Password</label>
+                        <input type="password" class="form-control" id="confirmPassword">
+                    </div>
+                    <div class="error-text" id="registerError"></div>
+                    <button class="btn-submit" onclick="handleRegister()">Register</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,30 @@
+# GitHub Pages Deployment Configuration
+# This file ensures proper deployment on GitHub Pages
+
+# Set the root directory for GitHub Pages
+root: /
+
+# Include all necessary files
+include:
+  - index.html
+  - styles.css
+  - script.js
+  - README.md
+  - pages/
+
+# Exclude unnecessary files
+exclude:
+  - .git/
+  - .gitignore
+
+# Enable Jekyll processing (optional)
+plugins:
+  - jekyll-relative-links
+
+# GitHub Pages specific settings
+relative_links:
+  enabled: true
+  collections: true
+
+markdown: kramdown
+highlighter: rouge
